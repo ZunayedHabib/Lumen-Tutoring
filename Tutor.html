@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert Math & Physics tutoring for IGCSE, Edexcel, Cambridge & NCEA students. Online and in-person tutoring with proven results. 4+ years experience, 100+ successful students.">
+    <meta name="keywords" content="math tutor, physics tutor, IGCSE tutor, Edexcel tutor, NCEA tutor, Cambridge tutor, online tutoring, math tutoring, physics tutoring">
+    <meta name="author" content="Zunayed - Lumen Tutoring">
+    <title>Lumen Tutoring - Expert Math & Physics Tuition | IGCSE, Edexcel, NCEA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            overflow-x: hidden;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 800;
+            color: #667eea;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 0.95em;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 180px 20px 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: moveGrid 25s linear infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to top, #ffffff, transparent);
+        }
+
+        @keyframes moveGrid {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(40px, 40px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-icon {
+            font-size: 5em;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero .tagline {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            opacity: 0.95;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.05em;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-button.secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Stats Section */
+        .stats {
+            background: white;
+            padding: 60px 20px;
+            box-shadow: 0 -10px 50px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 800;
+            color: #667eea;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1.1em;
+            color: #4a5568;
+            font-weight: 600;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #1a202c;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #718096;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(102,126,234,0.2);
+            border-color: #667eea;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            color: #1a202c;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 1.05em;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            color: #1a202c;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .about-text p {
+            font-size: 1.15em;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+
+        .about-features {
+            display: grid;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            font-size: 2em;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .qualifications {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .qualifications h3 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #667eea;
+            font-weight: 800;
+        }
+
+        .qual-item {
+            padding: 20px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s;
+        }
+
+        .qual-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(102,126,234,0.15);
+        }
+
+        .qual-item strong {
+            color: #2d3748;
+            font-size: 1.05em;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 2px solid #edf2f7;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .pricing-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102,126,234,0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: #667eea;
+            border-width: 3px;
+            position: relative;
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 700;
+        }
+
+        .pricing-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 15px;
+        }
+
+        .pricing-amount {
+            font-size: 3em;
+            font-weight: 800;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .pricing-period {
+            color: #718096;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 12px 0;
+            color: #4a5568;
+            border-bottom: 1px solid #edf2f7;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .contact-container {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            color: #1a202c;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .contact-box h3 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: #667eea;
+            font-weight: 800;
+        }
+
+        .contact-methods {
+            display: grid;
+            gap: 25px;
+            text-align: left;
+        }
+
+        .contact-item {
+            padding: 25px;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+            border-color: #667eea;
+            box-shadow: 0 4px 20px rgba(102,126,234,0.15);
+        }
+
+        .contact-icon {
+            font-size: 2.5em;
+            flex-shrink: 0;
+        }
+
+        .contact-details {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .contact-link {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 1.05em;
+            word-break: break-all;
+            transition: color 0.3s;
+        }
+
+        .contact-link:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        .contact-note {
+            margin-top: 35px;
+            padding: 25px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 12px;
+            color: #4a5568;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a202c;
+            color: #cbd5e0;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 140px 20px 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.2em;
+            }
+
+            .hero .tagline {
+                font-size: 1.1em;
+            }
+
+            .hero-icon {
+                font-size: 3.5em;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+
+            .contact-box {
+                padding: 35px 25px;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">💡 Lumen Tutoring</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-icon">💡</div>
+            <h1>Lumen Tutoring</h1>
+            <p class="tagline">Illuminate Your Path to Academic Excellence</p>
+            <p class="subtitle">Expert Math & Physics tuition for IGCSE, Edexcel, Cambridge & NCEA students. Personalized learning, proven results.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-button">Start Learning Today</a>
+                <a href="#about" class="cta-button secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">4+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Students Taught</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Success Rate</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Curricula Covered</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <h2 class="section-title">Subjects I Teach</h2>
+        <p class="section-subtitle">Comprehensive tutoring across multiple curricula with proven teaching methods</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📐</div>
+                <h3>Mathematics</h3>
+                <p>IGCSE, Edexcel O Level and AS Level, NCEA. Master algebra, calculus, geometry, and problem-solving with clear, structured lessons.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚛️</div>
+                <h3>Physics</h3>
+                <p>Edexcel O Level, NCEA Level 1 Physics. Understand mechanics, electricity, waves, and more through practical examples and real-world applications.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎓</div>
+                <h3>Exam Preparation</h3>
+                <p>Specialized test prep for Edexcel, NCEA, and Cambridge exams. Learn proven strategies, practice past papers, and boost your confidence.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✏️</div>
+                <h3>Homework & Assignment Help</h3>
+                <p>Expert guidance on assignments and projects. Develop effective study habits, time management skills, and academic independence.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Why Choose Lumen Tutoring?</h2>
+                <p>I'm Zunayed, a dedicated educator with a passion for making complex mathematics and physics concepts accessible to every student. With over 4 years of teaching experience and a Bachelor of Science degree, I bring both academic expertise and practical teaching skills to every session.</p>
+                <p>My student-centered approach focuses on understanding your unique learning style and pace. I believe every student has the potential to excel when given the right guidance, encouragement, and support.</p>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <span class="feature-text">Personalized lesson plans tailored to your needs</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💻</span>
+                        <span class="feature-text">Flexible online and in-person sessions</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📈</span>
+                        <span class="feature-text">Track record of consistent grade improvements</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🤝</span>
+                        <span class="feature-text">Patient, supportive teaching approach</span>
+                    </div>
+                </div>
+            </div>
+            <div class="qualifications">
+                <h3>Qualifications & Experience</h3>
+                <div class="qual-item">
+                    <strong>🎓 Bachelor of Science Degree</strong><br>
+                    Strong academic foundation in mathematics and sciences
+                </div>
+                <div class="qual-item">
+                    <strong>📚 4+ Years Tutoring Experience</strong><br>
+                    Proven track record with students of all levels
+                </div>
+                <div class="qual-item">
+                    <strong>🏫 University Teaching Assistant</strong><br>
+                    Hands-on academic teaching experience at university level
+                </div>
+                <div class="qual-item">
+                    <strong>⭐ 100+ Successful Students</strong><br>
+                    Guided students to achieve their academic goals
+                </div>
+                <div class="qual-item">
+                    <strong>🏆 Consistently Improved Results</strong><br>
+                    Students regularly achieve higher grades after tutoring
+                </div>
+                <div class="qual-item">
+                    <strong>🌍 Multi-Curriculum Expertise</strong><br>
+                    IGCSE, Edexcel, Cambridge & NCEA specialist
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pricing" id="pricing">
+        <h2 class="section-title">Flexible Pricing Options</h2>
+        <p class="section-subtitle">Affordable rates for quality education.</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-title">Single Session</div>
+                <div class="pricing-amount">$25</div>
+                <div class="pricing-period">per hour</div>
+                <ul class="pricing-features">
+                    <li>✓ One-on-one tutoring</li>
+                    <li>✓ Personalized materials</li>
+                    <li>✓ Homework support</li>
+                    <li>✓ Progress tracking</li>
+                </ul>
+            </div>
+            <div class="pricing-card featured">
+                <div class="pricing-badge">Most Popular</div>
+                <div class="pricing-title">Package Deal</div>
+                <div class="pricing-amount">$110</div>
+                <div class="pricing-period">5 hours</div>
+                <ul class="pricing-features">
+                    <li>✓ Save $15 per package</li>
+                    <li>✓ All single session benefits</li>
+                    <li>✓ Priority scheduling</li>
+                    <li>✓ Custom study plans</li>
+                </ul>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-title">Exam Prep Intensive</div>
+                <div class="pricing-amount">$200</div>
+                <div class="pricing-period">10 hours</div>
+                <ul class="pricing-features">
+                    <li>✓ Save $50 total</li>
+                    <li>✓ Focused exam strategies</li>
+                    <li>✓ Past paper practice</li>
+                    <li>✓ Confidence building</li>
+                </ul>
+            </div>
+        </div>
+        <p class="section-subtitle" style="margin-top: 40px;">🎁 First consultation is free! Contact me to discuss your learning goals.</p>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="contact-container">
+            <h2 class="section-title" style="color: white; margin-bottom: 20px;">Ready to Get Started?</h2>
+            <p style="font-size: 1.2em; margin-bottom: 40px; opacity: 0.95;">Contact me today for a free consultation and let's discuss how I can help you achieve your academic goals!</p>
+            
+            <div class="contact-box">
+                <h3>Let's Connect</h3>
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <div class="contact-label">Email</div>
+                            <a href="mailto:zunayedh777@gmail.com" class="contact-link">zunayedh777@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div class="contact-details">
+                            <div class="contact-label">WhatsApp</div>
+                            <a href="https://wa.me/6402040390023" class="contact-link" target="_blank">+64 020 4039 0023</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-details">
+                            <div class="contact-label">LinkedIn</div>
+                            <a href="https://linkedin.com/in/zunayedh" class="contact-link" target="_blank">linkedin.com/in/zunayedh</a>
+                        </div>
+                    </div>
+                </div>
